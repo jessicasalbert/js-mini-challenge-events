@@ -47,5 +47,20 @@ header.addEventListener("click", function(e) {
 
 
 /***** Deliverable 2 *****/
+const form = document.querySelector("#new-player-form")
+form.addEventListener("submit", function(e) {
+  e.preventDefault()
+  console.log("hi")
+  const player = {
+    name: form['name'].value,
+    number: form['number'].value,
+    photo: form['photo'].value,
+    nickname: form['nickname'].value,
+    likes: 0
+  }
+  renderPlayer(player);
+})
+
+
 
 /***** Deliverable 3 *****/
