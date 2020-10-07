@@ -47,6 +47,7 @@ header.addEventListener("click", function(e) {
 
 
 /***** Deliverable 2 *****/
+function newPlayer() {
 const form = document.querySelector("#new-player-form")
 form.addEventListener("submit", function(e) {
   e.preventDefault()
@@ -61,6 +62,14 @@ form.addEventListener("submit", function(e) {
   renderPlayer(player);
 })
 
+}
 
+newPlayer()
 
 /***** Deliverable 3 *****/
+
+document.addEventListener('click', function(e){
+  if(e.target.matches('.like-button')){
+    e.target.previousElementSibling.innerHTML = `${parseInt(e.target.previousElementSibling.innerHTML) + 1}`
+  }
+})
